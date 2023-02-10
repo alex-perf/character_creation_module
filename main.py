@@ -8,11 +8,7 @@ def attack(char_name: str, char_class: str) -> str:
     if char_class == 'warrior':
         return (f'{char_name} нанёс урон противнику равный '
                 f'{5 + randint(3, 5)}')
-        return (f'{char_name} нанёс урон противнику равный '
-                f'{5 + randint(3, 5)}')
     if char_class == 'mage':
-        return (f'{char_name} нанёс урон противнику равный '
-                f'{5 + randint(5, 10)}')
         return (f'{char_name} нанёс урон противнику равный '
                 f'{5 + randint(5, 10)}')
     if char_class == 'healer':
@@ -38,8 +34,6 @@ def special(char_name: str, char_class: str) -> str:
         return (f'{char_name} применил специальное умение «Выносливость'
                 f' {80 + 25}»')
     if char_class == 'mage':
-        return (f'{char_name} применил специальное умение «Атака '
-                f'{5 + 40}»')
         return (f'{char_name} применил специальное умение «Атака '
                 f'{5 + 40}»')
     if char_class == 'healer':
@@ -78,7 +72,7 @@ def start_training(char_name: str, char_class: str) -> str:
 
 
 def choice_char_class() -> str:
-    """Описание классов, выбор класса персонажа"""
+    """Описание классов, выбор класса персонажа."""
     approve_choice: str = ''
     char_class: str = ''
     while approve_choice != 'y':
@@ -89,14 +83,9 @@ def choice_char_class() -> str:
             print('Воитель — дерзкий воин ближнего боя. '
                   'Сильный, выносливый и отважный.')
         if char_class == 'mage':
-            print('Маг — находчивый воин дальнего боя.'
-                  ' Обладает высоким интеллектом.')
+            print('Маг — находчивый воин дальнего боя. '
+                  'Обладает высоким интеллектом.')
         if char_class == 'healer':
-            print('Лекарь — могущественный заклинатель. '
-                  'Черпает силы из природы, веры и духов.')
-        approve_choice = input('Нажми (Y), чтобы подтвердить выбор, или '
-                               'любую другую кнопку, '
-                               'чтобы выбрать другого персонажа ').lower()
             print('Лекарь — могущественный заклинатель. '
                   'Черпает силы из природы, веры и духов.')
         approve_choice = input('Нажми (Y), чтобы подтвердить выбор, или '
@@ -121,4 +110,3 @@ def main():
 
 
 main()
-
